@@ -1,0 +1,48 @@
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+  .example-container form > * {
+    margin: 5px 0;
+  }
+
+.example-container .mat-radio-button {
+  margin: 0 12px;
+}
+.mat-form-field{
+  width:100%
+}
+
+
+@media (max-width: 600px) {
+  mat-sidenav-container {
+    height: calc(100vh - 56px)
+  }
+}
+
+.my-drop-zone {
+  border: dotted 3px lightgray;
+}
+
+.nv-file-over {
+  border: dotted 3px red;
+}
+/* Default class applied to drop zones on over */
+.another-file-over-class {
+  border: dotted 3px green;
+}
+
+html, body {
+  height: 100%;
+}
