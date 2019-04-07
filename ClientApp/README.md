@@ -1,6 +1,14 @@
-# angularcore2
+# ang7matWebApiEx
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0. web api is used as the backend and Sql server express database is used. In the frontend Latest material design is used. 
+
+This is an example project with angular and web api with material design. The following service and components are used for this project
+
+    1) Login component
+    2) Product Componet
+ Services:
+    1) File Upload Service
+    2) Auth Service with json Web token
 
 ## Development server
 
