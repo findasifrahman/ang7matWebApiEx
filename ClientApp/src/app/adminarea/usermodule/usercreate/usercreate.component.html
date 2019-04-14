@@ -1,0 +1,38 @@
+<br /><br />
+<div class="container" *ngIf="Forms">
+  <form class="example-container" [formGroup]="Forms">
+    <mat-form-field floatLabel="options.value.floatLabel">
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="Username" type="Text" formControlName="username" required>
+    </mat-form-field>
+    <mat-form-field floatLabel="options.value.floatLabel">
+      <mat-label>User Phone</mat-label>
+      <input matInput placeholder="Phone" type="Text" formControlName="userphone" required>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <div formArrayName="userAddress" >
+      <div *ngFor="let address of getControls(); let i=index" [formGroupName]="i">
+        <mat-card class="mat-elevation-z8"  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%" fxLayoutAlign="start">
+          <mat-form-field floatLabel="options.value.floatLabel" fxFlex="40%" fxLayoutGap>
+            <input matInput placeholder="area" type="text" formControlName="area">
+          </mat-form-field>
+          <mat-form-field floatLabel="options.value.floatLabel" fxFlex="40%" fxLayoutAlign="center" fxLayoutGap>
+            <input matInput placeholder="Code" type="number" formControlName="areaCode">
+          </mat-form-field>
+          <button mat-raised-button color="warn" fxFlex="20%" fxLayoutAlign="center" fxLayoutGap (click)="deleteAddress(Forms.controls.userAddress, i)">
+            Delete Address
+          </button>
+        </mat-card>
+        <br />
+      </div>
+      <button mat-raised-button color="accent" (click)="addNewAddress(Forms.controls.userAddress)">
+        Add new Addres
+      </button>
+      <br />
+    </div>
+
+    <div class="input-group btn-group">
+      <button type="submit" (click)="FormSubmit()" class="form-control btn" style="height:40px;width:425px;background-color:black;color:whitesmoke" [disabled]="!Forms.valid">Submit</button>
+    </div>
+  </form>
+</div>
